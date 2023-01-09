@@ -1,0 +1,113 @@
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100%;
+  /* font-family: 'Gilroy-Medium'; */
+  color: #292d32;
+  background-color: #f3f3f3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-black: #001433;
+  --main-icon: #001433;
+  --main-indigo: #001433;
+  --sub-indigo: rgba(0, 20, 51, 0.7);
+  --gray-indigo: rgba(0, 20, 51, 0.2);
+  --main-blue: #2681f2;
+  --blue-shade: #4692f2;
+  --main-yellow: #fcc95c;
+  --main-red: #fd3939;
+  --main-background: #f3f3f3;
+  --main-border: #dddddd;
+  --main-tag: #cecece;
+  --main-gray: #bdbdbd;
+  --gray-icon: #b3b3b3;
+  --gray-text: #808999;
+  --gray-variant-i: #d9d9d9;
+}
+
+/* Input type checkbox */
+
+.blockprogress {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain;
+  background-color: black;
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--main-indigo);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type='checkbox']:checked::before {
+  transform: scale(1);
+}
+
+.previewComp {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  height: auto;
+  min-height: 200px;
+  border: 1px dashed gray;
+}
+
+.previewCompChild {
+  width: 12.5%;
+  height: 200px;
+  /* object-fit: cover; */
+}
+
+.previewCompChild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Input type checkbox */
